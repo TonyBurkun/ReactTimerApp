@@ -9,6 +9,29 @@
   <div id="app"></div>
 
   <script src="bundle.js"></script>
+  <script src="https://unpkg.com/expect/umd/expect.min.js"></script>
+
+  <script>
+    console.log('Starting tests');
+    function add(a, b){
+        return a + b;
+    }
+
+    expect(add(3,5)).toBe(8);
+
+    function capitalizeWord (word){
+        if (!word || typeof word !== 'string'){
+            word = '';
+        }
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+
+    expect(capitalizeWord('andrew')).toBe('Andrew');
+    expect(capitalizeWord('andrew')).toBeA('string');
+    expect(capitalizeWord()).toBe('');
+
+    console.info('All test have passed')
+  </script>
 </body>
 
 </html>
