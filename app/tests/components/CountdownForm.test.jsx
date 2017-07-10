@@ -2,7 +2,7 @@ var expect= require('expect'),
     React = require('react'),
     ReactDom = require('react-dom'),
     TestUtils = require('react-addons-test-utils'),
-    $ = require('JQuery');
+    $ = require('jQuery');
 
 var CountdownForm = require('CountdownForm');
 
